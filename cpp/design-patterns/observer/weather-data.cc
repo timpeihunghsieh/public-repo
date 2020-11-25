@@ -11,24 +11,6 @@ void WeatherData::SetMeasurement(
   humidity_ = humidity;
   temperature_ = temperature;
   pressure_ = pressure;
-  MeasurementChanged();
-}
-
-void WeatherData::MeasurementChanged() {
-  NotifyObservers();
-}
-
-void WeatherData::RegisterObserver(Observer* observer) {
-  observers_.insert(observer);
-}
-
-void WeatherData::RemoveObserver(Observer* observer) {
-  observers_.erase(observer);
-}
-
-void WeatherData::NotifyObservers() {
-  for (Observer* observer : observers_) {
-    observer->Update(humidity_, temperature_, pressure_);
-  }
+  NotifyObservers(humidity_, temperature_, pressure_);
 }
 }  // namespace observer_pattern

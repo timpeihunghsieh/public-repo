@@ -8,6 +8,10 @@ cc_library(
 cc_library(
     name = "subject",
     hdrs = ["subject.h"],
+    srcs = ["subject.cc"],
+    deps = [
+        ":observer",
+    ]
 )
 
 cc_library(
@@ -35,7 +39,6 @@ cc_library(
     srcs = ["weather-data.cc"],
     hdrs = ["weather-data.h"],
     deps = [
-        ":observer",
         ":subject",
     ],
 )
