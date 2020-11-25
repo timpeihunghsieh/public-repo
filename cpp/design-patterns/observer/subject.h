@@ -12,6 +12,9 @@ class Subject {
    Subject();
    void RegisterObserver(Observer* observer);
    void RemoveObserver(Observer* observer);
+
+   // NOTE: Ideally, a common Subject class would not have application level
+   // data here. This can be refactor out by using a generic data container.
    void NotifyObservers(double humidity,
                         double temperature,
                         double pressure);

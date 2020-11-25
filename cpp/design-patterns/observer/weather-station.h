@@ -11,7 +11,7 @@ class WeatherStation {
  public:
    WeatherStation();
 
-   // TODO(timhsieh): comment
+   // NOTE: Each call to this simulates an update to the weather_data.
    void PollAndPrint(double humidity, double temperature, double pressure);
 
  private:
