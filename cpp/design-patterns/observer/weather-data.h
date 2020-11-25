@@ -10,23 +10,23 @@ namespace observer_pattern {
 
 class WeatherData : public Subject {
  public:
- 	WeatherData();
+   WeatherData();
 
- 	void SetMeasurement(double humidity, double temperature, double pressure);
+   void SetMeasurement(double humidity, double temperature, double pressure);
 
- 	void RegisterObserver(Observer* observer) override;
- 	void RemoveObserver(Observer* observer) override;
- 	void NotifyObservers() override;
+   void RegisterObserver(Observer* observer) override;
+   void RemoveObserver(Observer* observer) override;
+   void NotifyObservers() override;
 
  private:
- 	void MeasurementChanged();
+   void MeasurementChanged();
 
- 	// Not owned
- 	std::set<Observer*> observers_;
+   // Not owned
+   std::set<Observer*> observers_;
 
- 	double humidity_;
- 	double temperature_;
- 	double pressure_;
+   double humidity_;
+   double temperature_;
+   double pressure_;
 };
 
 }  // namespace observer_pattern

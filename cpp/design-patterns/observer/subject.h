@@ -5,9 +5,9 @@ namespace observer_pattern {
 
 class Subject {
  public:
- 	virtual void RegisterObserver(Observer* observer) = 0;
- 	virtual void RemoveObserver(Observer* observer) = 0;
- 	virtual void NotifyObservers() = 0;
+   virtual void RegisterObserver(Observer* observer) = 0;
+   virtual void RemoveObserver(Observer* observer) = 0;
+   virtual void NotifyObservers() = 0;
 };
 
 }  // namespace observer_pattern

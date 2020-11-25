@@ -9,15 +9,15 @@ namespace observer_pattern {
 
 class WeatherStation {
  public:
- 	WeatherStation();
+   WeatherStation();
 
- 	// TODO(timhsieh): comment
- 	void PollAndPrint(double humidity, double temperature, double pressure);
+   // TODO(timhsieh): comment
+   void PollAndPrint(double humidity, double temperature, double pressure);
 
  private:
- 	WeatherData weather_data_;
- 	CurrentConditionDisplay current_condition_display_;
- 	StatisticsDisplay statistics_display_;
+   WeatherData weather_data_;
+   CurrentConditionDisplay current_condition_display_;
+   StatisticsDisplay statistics_display_;
 };
 
 }  // namespace observer_pattern

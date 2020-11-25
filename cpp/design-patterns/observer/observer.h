@@ -5,7 +5,7 @@ namespace observer_pattern {
 
 class Observer {
  public:
- 	virtual void Update(double humidity, double temperature, double pressure) = 0;
+   virtual void Update(double humidity, double temperature, double pressure) = 0;
 };
 
 }  // namespace observer_pattern

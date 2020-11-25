@@ -8,14 +8,14 @@ namespace observer_pattern {
 
 class StatisticsDisplay : public Observer {
  public:
- 	StatisticsDisplay(Subject* subject);
- 	void Update(double humidity, double temperature, double pressure) override;
+   StatisticsDisplay(Subject* subject);
+   void Update(double humidity, double temperature, double pressure) override;
 
  private:
- 	void Display();
+   void Display();
 
- 	double max_humidity_;
- 	double max_temperature_;
+   double max_humidity_;
+   double max_temperature_;
 };
 
 }  // namespace observer_pattern

@@ -8,14 +8,14 @@ namespace observer_pattern {
 
 class CurrentConditionDisplay : public Observer {
  public:
- 	CurrentConditionDisplay(Subject* subject);
- 	void Update(double humidity, double temperature, double pressure) override;
+   CurrentConditionDisplay(Subject* subject);
+   void Update(double humidity, double temperature, double pressure) override;
 
  private:
- 	void Display();
+   void Display();
 
- 	double humidity_;
- 	double temperature_;
+   double humidity_;
+   double temperature_;
 };
 
 }  // namespace observer_pattern
