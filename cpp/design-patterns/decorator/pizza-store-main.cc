@@ -11,7 +11,6 @@ int main(int argc, char** argv) {
   decorator_pattern::Pizza* pizza = new decorator_pattern::FarmHousePizza();
   pizza = new decorator_pattern::Barbeque(pizza);
   pizza = new decorator_pattern::FreshTomatoes(pizza);
-
   std::cout << "Barbeque FarmHouse Pizza with tomatoes: "
       << pizza->GetCost() << std::endl;
   return 0;
