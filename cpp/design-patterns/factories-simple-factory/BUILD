@@ -14,10 +14,19 @@ cc_library(
 )
 
 cc_library(
+    name = "veggie-pizza",
+    hdrs = ["veggie-pizza.h"],
+    deps = [
+        ":pizza",
+    ],
+)
+
+cc_library(
     name = "simple-pizza-factory",
     hdrs = ["simple-pizza-factory.h"],
     deps = [
         ":cheese-pizza",
+        ":veggie-pizza",
     ],
 )
 

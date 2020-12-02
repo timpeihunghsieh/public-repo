@@ -4,6 +4,7 @@
 #include<string>
 
 #include "cpp/design-patterns/factories-simple-factory/cheese-pizza.h"
+#include "cpp/design-patterns/factories-simple-factory/veggie-pizza.h"
 
 namespace simple_factory_pattern {
 
@@ -14,6 +15,8 @@ class SimplePizzaFactory {
   Pizza* CreatePizza(std::string type) {
     if (type == "cheese") {
       return new CheesePizza();
+    } else if (type == "veggie") {
+      return new VeggiePizza();
     } else {
       return nullptr;
     }
