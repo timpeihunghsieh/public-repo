@@ -28,9 +28,9 @@ class Pizza {
   virtual std::string GetName() = 0;
   std::string GetDescription() {
     return "Made with: \n"
-      + (dough_ != nullptr ? dough_->GetName() : "") + "\n"
-      + (sauce_ != nullptr ? sauce_->GetName() : "") + "\n"
-      + (cheese_ != nullptr ? cheese_->GetName() : "") + "\n"
+      + (dough_ != nullptr ? dough_->GetName() + "\n" : "")
+      + (sauce_ != nullptr ? sauce_->GetName() + "\n" : "")
+      + (cheese_ != nullptr ? cheese_->GetName() + "\n" : "")
       + (clam_ != nullptr ? clam_->GetName() : "");
   }
 

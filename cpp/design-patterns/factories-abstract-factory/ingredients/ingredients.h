@@ -20,6 +20,15 @@ class ThinCrustDough : public Dough {
   }
 };
 
+class ThickCrustDough : public Dough {
+ public:
+  ThickCrustDough() {}
+
+  std::string GetName() override {
+    return "ThickCrustDough";
+  }
+};
+
 class Sauce {
  public:
   Sauce() {}
@@ -32,6 +41,15 @@ class MarianaSauce : public Sauce {
 
   std::string GetName() override {
     return "MarianaSauce";
+  }
+};
+
+class BarbequeSauce : public Sauce {
+ public:
+  BarbequeSauce() {}
+
+  std::string GetName() override {
+    return "BarbequeSauce";
   }
 };
 
@@ -50,6 +68,15 @@ class ReggianoCheese : public Cheese {
   }
 };
 
+class ParmesanCheese : public Cheese {
+ public:
+  ParmesanCheese() {}
+
+  std::string GetName() override {
+    return "ParmesanCheese";
+  }
+};
+
 class Clam {
  public:
   Clam() {}
@@ -62,6 +89,15 @@ class FreshClam : public Clam {
 
   std::string GetName() override {
     return "FreshClam";
+  }
+};
+
+class LargeClam : public Clam {
+ public:
+  LargeClam() {}
+
+  std::string GetName() override {
+    return "LargeClam";
   }
 };
 

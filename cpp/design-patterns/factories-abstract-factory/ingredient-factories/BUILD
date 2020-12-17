@@ -16,3 +16,12 @@ cc_library(
       "//cpp/design-patterns/factories-abstract-factory/ingredients:ingredients",
     ],
 )
+
+cc_library(
+    name = "chicago-ingredient-factory",
+    hdrs = ["chicago-ingredient-factory.h"],
+    deps = [
+      ":ingredient-factory",
+      "//cpp/design-patterns/factories-abstract-factory/ingredients:ingredients",
+    ],
+)
