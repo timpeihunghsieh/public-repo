@@ -1,1 +1,1 @@
-![AbstractFactoryDiagram](https://github.com/timpeihunghsieh/public-repo/blob/main/cpp/design-patterns/strategy/assets/AbstractFactoryDiagram.png?raw=true)
+![AbstractFactoryDiagram](https://raw.githubusercontent.com/timpeihunghsieh/public-repo/main/cpp/design-patterns/factories-abstract-factory/assets/AbstractFactoryDiagram.png)
