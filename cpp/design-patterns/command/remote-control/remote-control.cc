@@ -8,6 +8,7 @@ RemoteControl::RemoteControl() {
     on_commands_.push_back(no_command);
     off_commands_.push_back(no_command);
   }
+  undo_command_ = no_command;
 }
 
 void RemoteControl::SetCommand(
@@ -18,10 +19,16 @@ void RemoteControl::SetCommand(
 
 void RemoteControl::PushOnButton(int slot) {
   on_commands_[slot]->Execute();
+  undo_command_ = on_commands_[slot];
 }
 
 void RemoteControl::PushOffButton(int slot) {
   off_commands_[slot]->Execute();
+  undo_command_ = off_commands_[slot];
+}
+
+void RemoteControl::PushUndoButton() {
+  undo_command_->Undo();
 }
 
 }  // namespace command_pattern

@@ -25,6 +25,9 @@ TEST_F(GarageDoorTest, GarageDoorUpCommand) {
 
   command.Execute();
   EXPECT_TRUE(garage_door.IsOpen());
+
+  command.Undo();
+  EXPECT_FALSE(garage_door.IsOpen());
 }
 
 TEST_F(GarageDoorTest, GarageDoorDownCommand) {
@@ -32,6 +35,9 @@ TEST_F(GarageDoorTest, GarageDoorDownCommand) {
   GarageDoorDownCommand command(&garage_door);
 
   command.Execute();
+  EXPECT_FALSE(garage_door.IsOpen());
+
+  command.Undo();
   EXPECT_FALSE(garage_door.IsOpen());
 }
 

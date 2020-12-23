@@ -13,11 +13,21 @@ class GarageDoorUpCommand : public Command {
   }
 
   void Execute() override {
+    is_prev_door_on_ = garage_door_->IsOpen();
     garage_door_->Open();
+  }
+
+  void Undo() override {
+    if (is_prev_door_on_) {
+      garage_door_->Open();
+    } else {
+      garage_door_->Close();
+    }
   }
 
  private:
   GarageDoor* garage_door_;
+  bool is_prev_door_on_;
 };
 
 }  // namespace command_pattern

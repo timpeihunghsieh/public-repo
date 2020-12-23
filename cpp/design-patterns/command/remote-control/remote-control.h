@@ -15,10 +15,12 @@ class RemoteControl {
   void SetCommand(int slot, Command* on_command, Command* off_command);
   void PushOnButton(int slot);
   void PushOffButton(int slot);
+  void PushUndoButton();
 
  private:
   std::vector<Command*> on_commands_;
   std::vector<Command*> off_commands_;
+  Command* undo_command_;
 };
 
 }  // namespace command_pattern

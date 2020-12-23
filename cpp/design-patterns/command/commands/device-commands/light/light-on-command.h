@@ -10,14 +10,25 @@ class LightOnCommand : public Command {
  public:
   LightOnCommand(Light* light) {
     light_ = light;
+    is_prev_light_on_ = false;
   }
 
   void Execute() override {
+    is_prev_light_on_ = light_->IsOn();
     light_->On();
+  }
+
+  void Undo() override {
+    if (is_prev_light_on_) {
+      light_->On();
+    } else {
+      light_->Off();
+    }
   }
 
  private:
   Light* light_;
+  bool is_prev_light_on_;
 };
 
 }  // namespace command_pattern

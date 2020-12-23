@@ -13,6 +13,7 @@ TEST_F(RemoteControlTest, DefaultControl) {
     control.PushOnButton(i);
     control.PushOffButton(i);  
   }
+  control.PushUndoButton();
 }
 
 }  // namespace command_pattern

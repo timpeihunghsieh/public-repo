@@ -8,6 +8,7 @@ class NoCommand : public Command {
   NoCommand() {}
 
   void Execute() override {}
+  void Undo() override {}
 };
 
 }  // namespace command_pattern

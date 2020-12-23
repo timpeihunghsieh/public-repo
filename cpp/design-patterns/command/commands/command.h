@@ -6,6 +6,7 @@ namespace command_pattern {
 class Command {
  public:
   virtual void Execute() = 0;
+  virtual void Undo() = 0;
 };
 
 }  // namespace command_pattern

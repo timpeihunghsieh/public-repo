@@ -25,6 +25,9 @@ TEST_F(LightTest, LightOnCommand) {
 
   command.Execute();
   EXPECT_TRUE(light.IsOn());
+
+  command.Undo();
+  EXPECT_FALSE(light.IsOn());
 }
 
 TEST_F(LightTest, LightOffCommand) {
@@ -32,6 +35,9 @@ TEST_F(LightTest, LightOffCommand) {
   LightOffCommand command(&light);
 
   command.Execute();
+  EXPECT_FALSE(light.IsOn());
+
+  command.Undo();
   EXPECT_FALSE(light.IsOn());
 }
 
