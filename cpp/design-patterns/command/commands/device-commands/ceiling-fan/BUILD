@@ -15,6 +15,14 @@ cc_library(
 )
 
 cc_library(
+    name = "ceiling-fan-medium-command",
+    hdrs = ["ceiling-fan-medium-command.h"],
+    deps = [
+        "ceiling-fan-command",
+    ]
+)
+
+cc_library(
     name = "ceiling-fan-high-command",
     hdrs = ["ceiling-fan-high-command.h"],
     deps = [
@@ -29,6 +37,7 @@ cc_test(
     deps = [
         ":ceiling-fan",
         ":ceiling-fan-high-command",
+        ":ceiling-fan-medium-command",
         "@googletest//:gtest_main",
     ],
 )
