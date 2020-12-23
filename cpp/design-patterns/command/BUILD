@@ -9,5 +9,6 @@ cc_binary(
       "//cpp/design-patterns/command/commands/device-commands/garage-door:garage-door-down-command",
       "//cpp/design-patterns/command/commands/device-commands/light:light-off-command",
       "//cpp/design-patterns/command/commands/device-commands/light:light-on-command",
+      "//cpp/design-patterns/command/commands:macro-command",
     ],
 )
