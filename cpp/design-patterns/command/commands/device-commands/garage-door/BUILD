@@ -9,8 +9,8 @@ cc_library(
 )
 
 cc_library(
-    name = "garage-door-up-command",
-    hdrs = ["garage-door-up-command.h"],
+    name = "garage-door-command",
+    hdrs = ["garage-door-command.h"],
     deps = [
         ":garage-door",
         "//cpp/design-patterns/command/commands:command"
@@ -18,11 +18,18 @@ cc_library(
 )
 
 cc_library(
+    name = "garage-door-up-command",
+    hdrs = ["garage-door-up-command.h"],
+    deps = [
+        ":garage-door-command",
+    ]
+)
+
+cc_library(
     name = "garage-door-down-command",
     hdrs = ["garage-door-down-command.h"],
     deps = [
-        ":garage-door",
-        "//cpp/design-patterns/command/commands:command"
+        ":garage-door-command",
     ]
 )
 
